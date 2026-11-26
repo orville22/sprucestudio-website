@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spruce Studio | Website redesigns for Victorian businesses</title>
+<meta name="description" content="Spruce Studio redesigns your business website first and shows it to you before you pay. Web design for Melbourne, Geelong and regional Victoria.">
+<meta property="og:title" content="Spruce Studio | We redesign your website first. You decide after.">
+<meta property="og:description" content="A modern version of your business website, built before you pay anything. Melbourne, Geelong and regional Victoria.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sprucestudio.com.au/">
+<meta name="theme-color" content="#C8F03C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='10' fill='%23C8F03C'/%3E%3Cpath d='M17 6 L24 15 H20.5 L26 23 H8 L13.5 15 H10 Z' fill='%23141A16'/%3E%3Crect x='15.5' y='23' width='3' height='5' fill='%23141A16'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Spruce Studio","url":"https://sprucestudio.com.au/","email":"hello@sprucestudio.com.au","description":"Website redesigns for small businesses in Melbourne, Geelong and regional Victoria.","areaServed":["Melbourne","Geelong","Victoria, Australia"],"address":{"@type":"PostalAddress","addressLocality":"Melbourne","addressRegion":"VIC","addressCountry":"AU"},"priceRange":"$$"}
+</script>
+<style>
+:root{
+  --lime:#C8F03C; --ink:#141A16; --ink-2:#3A453D; --muted:#4A524C;
+  --paper:#F7F8F3; --white:#FFFFFF; --line:#E1E5DA; --line-2:#D5DACE;
+  --shadow-sm:0 1px 2px rgba(20,26,22,.05),0 6px 18px rgba(20,26,22,.06);
+  --shadow-md:0 2px 4px rgba(20,26,22,.06),0 16px 36px rgba(20,26,22,.10);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',system-ui,sans-serif;margin:0}
+p{margin:0}
+a{color:var(--ink)}
+img,svg{display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px;text-decoration:none;cursor:pointer;border:1.5px solid var(--ink);transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .2s}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-light{background:#fff;color:var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(20,26,22,.18)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.btn .arrow{transition:transform .25s var(--ease)}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(247,248,243,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E3E7DC}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}
+.brand svg{transition:transform .35s var(--ease)}
+.brand:hover svg{transform:rotate(-8deg) scale(1.06)}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.nav-links a:not(.btn){color:var(--ink-2);text-decoration:none;background:linear-gradient(var(--lime),var(--lime)) 0 100%/0 3px no-repeat;padding:4px 0;transition:background-size .3s var(--ease),color .2s}
+.nav-links a:not(.btn):hover{color:var(--ink);background-size:100% 3px}
+.nav-links .btn{font-size:15px;padding:11px 20px}
+.menu-btn{display:none;font:inherit;font-weight:600;background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:10px 16px;cursor:pointer}
+@media (max-width:820px){
+  .menu-btn{display:inline-flex}
+  .nav{flex-wrap:wrap}
+  .nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;gap:4px;padding:8px 0 4px}
+  .nav-links.open{display:flex}
+  .nav-links a:not(.btn){padding:12px 4px;font-size:17px}
+  .nav-links .btn{margin-top:8px}
+}
+
+/* Hero */
+.hero{padding:64px 0 104px;overflow:hidden}
+.hero-grid{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.hero-copy{flex:1 1 440px;min-width:0}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #DDE2D6;color:var(--ink-2);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;margin-bottom:22px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:#6BA81E}
+h1{font-size:clamp(44px,6vw,80px);line-height:1.02;letter-spacing:-.035em;font-weight:800}
+.mark{background:var(--lime);padding:0 .12em;border-radius:.14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lead{margin-top:28px;font-size:19px;line-height:1.55;color:var(--muted);max-width:520px}
+.cta-row{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px}
+
+.compare{flex:1 1 520px;min-width:0;position:relative}
+.blob{position:absolute;right:-60px;top:30px;width:420px;height:420px;border-radius:50%;background:var(--lime)}
+.compare-inner{position:relative}
+.toggle{display:flex;gap:4px;background:#fff;border:1.5px solid var(--ink);padding:4px;border-radius:999px;width:fit-content;margin:0 auto 20px;box-shadow:var(--shadow-sm)}
+.toggle button{font:inherit;font-size:15px;font-weight:600;padding:11px 22px;border-radius:999px;border:0;cursor:pointer;background:transparent;color:var(--ink);transition:background-color .25s,color .25s}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.toggle button[aria-pressed="false"]:hover{background:#EEF1E8}
+.browser{background:#fff;border:1.5px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:10px 12px 0 var(--ink);transform:rotate(-1.2deg);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.compare:hover .browser{transform:rotate(0deg) translateY(-4px);box-shadow:14px 16px 0 var(--ink)}
+.bar{display:flex;align-items:center;gap:7px;padding:11px 16px;background:#F0F2EC;border-bottom:1.5px solid var(--ink)}
+.bar i{width:11px;height:11px;border-radius:50%;background:var(--ink)}
+.bar span{margin-left:12px;flex:1;background:#fff;border:1px solid var(--line-2);border-radius:6px;padding:5px 12px;font-size:12px;color:var(--ink-2)}
+.screen{height:360px}
+.screen[hidden]{display:none}
+.old{background:#DADADA;font-family:'Times New Roman',serif;color:#222;padding:14px}
+.old-head{background:#1B3F8B;color:#FFE94D;padding:10px;font-size:24px;text-align:center;font-weight:bold}
+.old-body{display:flex;gap:10px;margin-top:10px}
+.old-nav{width:110px;background:#EFEFEF;padding:8px;font-size:12px;line-height:1.9;color:#00E;text-decoration:underline}
+.old-main{flex:1;font-size:12px;line-height:1.35}
+.old-photo{height:84px;background:#B8B8B8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#444;margin-top:8px}
+.new{background:#fff;padding:20px 24px;display:flex;flex-direction:column;gap:14px}
+.new-top{display:flex;justify-content:space-between;align-items:center}
+.new-top b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px}
+.new-top span{background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px}
+.new-hero{flex:1;border-radius:14px;background:var(--lime);padding:22px;display:flex;flex-direction:column;justify-content:flex-end}
+.new-hero small{font-size:13px;font-weight:600}
+.new-hero strong{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;line-height:1.02;letter-spacing:-.02em;margin-top:6px}
+.new-tags{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;font-size:13px;font-weight:600}
+.new-tags span{border:1.5px solid var(--ink);border-radius:10px;padding:11px 12px}
+.caption{margin-top:26px;text-align:center;font-size:13px;color:var(--ink-2)}
+
+/* Strip */
+.strip{background:var(--lime);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:22px 0}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 32px;font-weight:600;font-size:17px}
+
+/* Sections */
+section.block{padding:112px 0}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+h2{margin:12px 0 56px;font-size:clamp(34px,4.2vw,56px);line-height:1.04;letter-spacing:-.03em;max-width:760px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+
+/* Cards */
+.card{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:36px;box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--line-2)}
+.card.feature{background:var(--lime);border-color:var(--ink)}
+.num{display:inline-flex;width:52px;height:52px;border-radius:16px;background:var(--ink);color:#fff;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px;transition:transform .35s var(--ease)}
+.card:hover .num{transform:rotate(-6deg) scale(1.06)}
+.card.feature .num{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+.card h3{margin:26px 0 10px;font-size:26px;letter-spacing:-.02em}
+.card p{font-size:16px;line-height:1.6;color:var(--muted)}
+.card.feature p{color:var(--ink)}
+
+/* Included */
+.split{display:flex;flex-wrap:wrap;gap:56px}
+.split-intro{flex:1 1 360px;min-width:0}
+.split-intro h2{margin-bottom:20px}
+.split-intro p{font-size:18px;line-height:1.6;color:var(--muted);max-width:440px}
+.features{flex:1 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.feat{background:#fff;border-radius:18px;padding:24px;box-shadow:var(--shadow-sm);border:1.5px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.feat:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.feat .ico{width:44px;height:44px;border-radius:12px;background:var(--lime);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:transform .35s var(--ease)}
+.feat:hover .ico{transform:rotate(-8deg)}
+.feat h3{font-size:20px;margin-bottom:6px}
+.feat p{font-size:15px;line-height:1.55;color:var(--muted)}
+
+/* Pricing */
+.pricing{background:#fff;border-top:1px solid #E3E7DC;border-bottom:1px solid #E3E7DC}
+.plan{display:flex;flex-direction:column;gap:14px;border-color:var(--line-2)}
+.plan h3{margin:0;font-size:24px}
+.plan-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.badge{background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.price{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;letter-spacing:-.03em;line-height:1}
+.price small{font-size:17px;font-weight:600;letter-spacing:0}
+.plan .sub{font-size:15px;line-height:1.55}
+.plan ul{list-style:none;margin:8px 0 0;padding:18px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.45}
+.card.feature ul{border-top-color:rgba(20,26,22,.25)}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li svg{flex:none;margin-top:2px}
+.plan .btn{margin-top:auto;font-size:16px;padding:14px 22px}
+.plan-gap{flex:1}
+.price-note{margin-top:32px;font-size:15px;color:var(--muted);max-width:760px}
+
+/* Why + FAQ */
+.why{text-align:center;max-width:980px;margin:0 auto}
+.why p{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,48px);line-height:1.2;letter-spacing:-.025em}
+.why .light{font-weight:500;color:var(--muted)}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.faq .card{padding:28px}
+.faq h3{margin:0 0 10px;font-size:21px}
+
+/* CTA */
+.cta{background:var(--lime);border:1.5px solid var(--ink);border-radius:32px;padding:clamp(36px,6vw,80px);display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.cta-copy{flex:1 1 420px;min-width:0}
+.cta-copy h2{margin:0;font-size:clamp(36px,4.6vw,64px);line-height:1}
+.cta-copy p{margin-top:20px;font-size:18px;line-height:1.55;max-width:460px}
+form.start{flex:1 1 380px;min-width:0;background:#fff;border:1.5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:8px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+form.start:hover{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--ink)}
+form.start label{font-size:14px;font-weight:600;margin-top:10px}
+form.start input{font:inherit;font-size:16px;padding:15px 16px;border-radius:12px;border:1.5px solid #B9C0B2;background:var(--paper);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+form.start input:hover{border-color:var(--ink-2)}
+form.start input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(200,240,60,.7)}
+form.start .btn{margin-top:18px;width:100%}
+.fine{margin-top:10px;font-size:13px;color:var(--muted);text-align:center}
+.fine a{color:var(--muted)}
+.hp{position:absolute;left:-5000px}
+
+/* Footer */
+footer{border-top:1px solid #E3E7DC;padding:40px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 24px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--ink);text-decoration:underline}
+footer .brand{font-size:20px;color:var(--ink)}
+
+@media (max-width:600px){
+  .wrap{padding:0 20px}
+  .hero{padding:40px 0 72px}
+  section.block{padding:80px 0}
+  .blob{width:300px;height:300px;right:-80px}
+  .screen{height:330px}
+  .new-hero strong{font-size:26px}
+  .card{padding:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Spruce Studio home">
+      <svg width="36" height="36" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#C8F03C"/><path d="M17 6 L24 15 H20.5 L26 23 H8 L13.5 15 H10 Z" fill="#141A16"/><rect x="15.5" y="23" width="3" height="5" fill="#141A16"/></svg>
+      Spruce Studio
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#included">What you get</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#start" class="btn btn-dark">Get a free redesign</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="pill"><span class="dot" aria-hidden="true"></span>Web design for Melbourne, Geelong &amp; regional Victoria</p>
+      <h1>We redesign your website first. <span class="mark">You decide after.</span></h1>
+      <p class="lead">We build a modern version of your business website and show it to you before you pay anything. If you like it, it's yours. If you don't, you owe nothing.</p>
+      <div class="cta-row">
+        <a href="#start" class="btn btn-dark">Show me my new website <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="#how" class="btn btn-light">How it works</a>
+      </div>
+    </div>
+
+    <div class="compare">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="compare-inner">
+        <div class="toggle" role="group" aria-label="Compare the old and new website">
+          <button type="button" data-view="before" aria-pressed="false">Before</button>
+          <button type="button" data-view="after" aria-pressed="true">After Spruce</button>
+        </div>
+        <div class="browser">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>yourbusiness.com.au</span></div>
+          <div class="screen old" id="screen-before" hidden aria-label="Example of an outdated website">
+            <div class="old-head">Welcome to Smith Plumbing!!!</div>
+            <div class="old-body">
+              <div class="old-nav">Home<br>About Us<br>Services<br>Gallery<br>Links<br>Contact</div>
+              <div class="old-main">
+                <p>We have been servicing the area for many years. Please call us for all your plumbing needs. We do hot water, blocked drains, gas fitting and much more. Click on the links on the left to find out more information about our company and services.</p>
+                <div class="old-photo">[ photo not loading ]</div>
+                <p style="margin-top:8px;font-size:10px;color:#555">Site last updated 2014 · Best viewed at 1024×768</p>
+              </div>
+            </div>
+          </div>
+          <div class="screen new" id="screen-after" aria-label="Example of the same website after a Spruce Studio redesign">
+            <div class="new-top"><b>Smith Plumbing</b><span>Call now</span></div>
+            <div class="new-hero"><small>Available 7 days</small><strong>Blocked drain?<br>We're there today.</strong></div>
+            <div class="new-tags"><span>Hot water</span><span>Drains</span><span>Gas fitting</span></div>
+          </div>
+        </div>
+        <p class="caption">Example business. Tap Before / After to compare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" role="note">
+  <div class="wrap"><span>No upfront cost</span><span aria-hidden="true">✦</span><span>See it before you pay</span><span aria-hidden="true">✦</span><span>Works on every phone</span><span aria-hidden="true">✦</span><span>Built in Victoria</span></div>
+</div>
+
+<section class="block" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps. Only the last one involves money.</h2>
+    <div class="grid-3">
+      <article class="card"><span class="num">1</span><h3>Send us your web address</h3><p>Or we find you first. Either way, we start from the site you already have and what your customers need from it.</p></article>
+      <article class="card"><span class="num">2</span><h3>We rebuild it, for free</h3><p>A fresh, fast, mobile-friendly version with your services, contact details and branding front and centre.</p></article>
+      <article class="card feature"><span class="num">3</span><h3>You decide</h3><p>Love it? We put it live on your domain. Not for you? Walk away. No invoice, no hard sell.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="included" style="padding-top:0">
+  <div class="wrap split">
+    <div class="split-intro">
+      <p class="eyebrow">What you get</p>
+      <h2>A website that does its job.</h2>
+      <p>Most customers check your website before they call. An old one quietly sends them to someone else. A spruced-up one gets the phone ringing.</p>
+    </div>
+    <div class="features">
+      <div class="feat"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div><h3>Looks right on phones</h3><p>Most visitors are on a phone. Your site will be built for that first.</p></div>
+      <div class="feat"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Loads fast</h3><p>Lean, modern code. No waiting, no spinning wheels.</p></div>
+      <div class="feat"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Easy to find on Google</h3><p>Clear page titles, local search basics and a Google Maps listing link.</p></div>
+      <div class="feat"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><h3>One tap to contact you</h3><p>Call, email and enquiry buttons where customers expect them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pricing" id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2>Simple prices. You only pay once you've seen it.</h2>
+    <div class="grid-3">
+      <article class="card plan">
+        <h3>The Refresh</h3>
+        <p class="price">$999 <small>one-off</small></p>
+        <p class="sub" style="color:var(--muted)">Your redesigned site, put live on your domain.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Up to 5 pages</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mobile-friendly design</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Your logo, photos and text moved across</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Enquiry form and click-to-call</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Google search basics</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>2 rounds of changes</li>
+        </ul>
+        <div class="plan-gap"></div>
+        <a href="#start" class="btn btn-light">Start with a free redesign</a>
+      </article>
+      <article class="card plan feature">
+        <div class="plan-head"><h3>Refresh + Upkeep</h3><span class="badge">Most popular</span></div>
+        <p class="price">$999 <small>+ $59/month</small></p>
+        <p class="sub">We look after it, so you never have to think about it.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Everything in The Refresh</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hosting and security certificate</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Updates, backups and monitoring</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Up to 30 minutes of changes each month: prices, photos, opening hours</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>No lock-in contract</li>
+        </ul>
+        <div class="plan-gap"></div>
+        <a href="#start" class="btn btn-dark">Start with a free redesign</a>
+      </article>
+      <article class="card plan">
+        <h3>Edit It Yourself</h3>
+        <p class="price">$1,799 <small>one-off</small></p>
+        <p class="sub" style="color:var(--muted)">For businesses that like to make their own changes.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Everything in The Refresh</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Simple admin panel for text, photos and specials</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>A one-on-one walkthrough so you're confident using it</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#141A16" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Add Upkeep for $59/month for hosting and support</li>
+        </ul>
+        <div class="plan-gap"></div>
+        <a href="#start" class="btn btn-light">Start with a free redesign</a>
+      </article>
+    </div>
+    <p class="price-note">All prices in Australian dollars. Need more than 5 pages, online bookings or a shop? Tell us what you need and we'll quote it.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap why">
+    <p>spruce up <span class="light">(verb)</span>: to make something neat, fresh and smart. <span class="mark" style="padding:0 10px;border-radius:10px">That's the whole job.</span></p>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2>Fair questions, straight answers.</h2>
+    <div class="faq">
+      <article class="card"><h3>Why do the work before you're paid?</h3><p>Because it's hard to judge a website from a quote. Seeing your own business on a better site makes the decision easy, either way.</p></article>
+      <article class="card"><h3>What if I don't like it?</h3><p>Tell us what to change, or tell us no. There's nothing to pay and nothing to cancel.</p></article>
+      <article class="card"><h3>Do I keep my domain and email?</h3><p>Yes. Your web address and email stay as they are. We just replace what people see.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="start" style="padding-top:0;padding-bottom:96px">
+  <div class="wrap">
+    <div class="cta">
+      <div class="cta-copy">
+        <h2>Curious what your site could look like?</h2>
+        <p>Send us your web address. We'll email you a link to your redesigned site, usually within [TURNAROUND].</p>
+      </div>
+      <form class="start" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New free redesign request">
+        <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        <label for="site">Your current website</label>
+        <input id="site" name="website" type="text" inputmode="url" placeholder="yourbusiness.com.au" required>
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="you@yourbusiness.com.au" autocomplete="email" required>
+        <button type="submit" class="btn btn-dark">Get my free redesign <span class="arrow" aria-hidden="true">→</span></button>
+        <p class="fine">No payment details. No obligation. <a href="privacy.html">Privacy</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand"><svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#C8F03C"/><path d="M17 6 L24 15 H20.5 L26 23 H8 L13.5 15 H10 Z" fill="#141A16"/><rect x="15.5" y="23" width="3" height="5" fill="#141A16"/></svg>Spruce Studio</a>
+    <span>Melbourne, Victoria · <a href="mailto:hello@sprucestudio.com.au">hello@sprucestudio.com.au</a> · ABN 21 654 975 094</span>
+    <span><a href="privacy.html">Privacy</a> · © <span id="year">2026</span> Spruce Studio</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Before / after toggle
+  var buttons = document.querySelectorAll('.toggle button');
+  var before = document.getElementById('screen-before');
+  var after = document.getElementById('screen-after');
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      var showBefore = b.dataset.view === 'before';
+      before.hidden = !showBefore; after.hidden = showBefore;
+      buttons.forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+    });
+  });
+  // Mobile menu
+  var menuBtn = document.querySelector('.menu-btn');
+  var links = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ links.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent = 'Menu'; });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
