@@ -9,4 +9,3 @@ No build step. Deploy on Vercel with the "Other" framework preset and the projec
 
 ## Before launch
 - Enquiry form posts to Formspree form `mwlozkyb`
-- Replace `[TURNAROUND]` in `index.html`
